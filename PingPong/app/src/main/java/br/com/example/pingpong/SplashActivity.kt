@@ -1,12 +1,24 @@
 package br.com.example.pingpong
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 
 class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash) // R referência com todos os arquivos XML ou Kotlins
+
+        Handler().postDelayed({
+            nextScreen()
+        },2000L)
+    }
+
+    private fun nextScreen() {
+        val nextScreen = Intent(this, PlayerActivity::class.java)
+        startActivity(nextScreen)
+        finish()
     }
 }

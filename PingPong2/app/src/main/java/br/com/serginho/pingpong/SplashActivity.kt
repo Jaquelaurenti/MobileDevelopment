@@ -1,4 +1,4 @@
-package br.com.example.pingpong
+package br.com.serginho.pingpong
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,11 +10,10 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        // R referência com todos os arquivos XML ou Kotlins
 
         Handler().postDelayed({
             nextScreen()
-        },2000L)
+        }, 2000L)
     }
 
     private fun nextScreen() {
